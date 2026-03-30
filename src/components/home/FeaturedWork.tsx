@@ -3,31 +3,12 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/lib/navigation'
+import { kitchens } from '@/data/kitchens'
 
-const kitchensData = [
-  {
-    slug: 'cocina-moderna-blanca',
-    name: 'Cocina Moderna Blanca',
-    style: 'moderna' as const,
-    bg: '#1A1A17',
-    bgHover: '#222220',
-  },
-  {
-    slug: 'cocina-rustica-madera',
-    name: 'Cocina Rústica Madera',
-    style: 'rustica' as const,
-    bg: '#222220',
-    bgHover: '#2A2A27',
-  },
-  {
-    slug: 'cocina-minimalista',
-    name: 'Cocina Minimalista',
-    style: 'minimalista' as const,
-    bg: '#1E1E1B',
-    bgHover: '#262623',
-  },
-]
+const FEATURED_SLUGS = ['negra-madera-roble', 'verde-salvia-marmol', 'elegante-isla-vistas-mar']
+const kitchensData = FEATURED_SLUGS.map((slug) => kitchens.find((k) => k.slug === slug)!)
 
 function KitchenItem({
   kitchen,
@@ -50,15 +31,14 @@ function KitchenItem({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Placeholder image */}
-      <div
-        className="absolute inset-0 transition-transform duration-700"
-        style={{
-          backgroundColor: kitchen.bg,
-          transform: hovered ? 'scale(1.04)' : 'scale(1)',
-          backgroundImage: `radial-gradient(ellipse at ${hovered ? '60%' : '40%'} 50%, rgba(201,169,110,0.06) 0%, transparent 70%)`,
-          transition: 'transform 0.7s ease, background-image 0.7s ease',
-        }}
+      {/* Real image */}
+      <Image
+        src={kitchen.images[0]}
+        alt={kitchen.name}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover transition-transform duration-700"
+        style={{ transform: hovered ? 'scale(1.04)' : 'scale(1)' }}
       />
 
       {/* Overlay gradient */}
