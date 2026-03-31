@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -15,13 +14,11 @@ function KitchenItem({
   styleLabel,
   className,
   minHeight,
-  revealDelay = 0,
 }: {
   kitchen: (typeof kitchensData)[number]
   styleLabel: string
   className?: string
   minHeight?: string
-  revealDelay?: number
 }) {
   const [hovered, setHovered] = useState(false)
   const [loaded, setLoaded] = useState(false)
@@ -31,34 +28,24 @@ function KitchenItem({
   return (
     <Link
       href={`/cocinas/${kitchen.slug}`}
-      className={`relative overflow-hidden block group ${className ?? ''}`}
+      className={`relative overflow-hidden block group img-placeholder ${className ?? ''}`}
       style={{ minHeight }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="absolute inset-0 img-shimmer" />
-      {/* Real image */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ clipPath: 'inset(0 0 100% 0)' }}
-        whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
-        viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: revealDelay }}
-      >
-        <Image
-          src={kitchen.images[0]}
-          alt={translatedName}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700"
-          onLoad={() => setLoaded(true)}
-          style={{
-            transform: hovered ? 'scale(1.04)' : 'scale(1)',
-            opacity: loaded ? 1 : 0,
-            transition: 'transform 0.7s ease, opacity 0.2s ease',
-          }}
-        />
-      </motion.div>
+      <Image
+        src={kitchen.images[0]}
+        alt={translatedName}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover"
+        onLoad={() => setLoaded(true)}
+        style={{
+          transform: hovered ? 'scale(1.04)' : 'scale(1)',
+          opacity: loaded ? 1 : 0,
+          transition: 'transform 0.7s ease, opacity 0.4s ease',
+        }}
+      />
 
       {/* Overlay gradient */}
       <div
@@ -158,11 +145,7 @@ export default function FeaturedWork() {
         </div>
 
         {/* Asymmetric grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
           style={{ gridTemplateRows: 'auto' }}
         >
@@ -173,14 +156,13 @@ export default function FeaturedWork() {
               styleLabel={ts(kitchensData[0].style)}
               minHeight="480px"
               className="h-full"
-              revealDelay={0.05}
             />
           </div>
 
           {/* Two stacked items on right */}
-          <KitchenItem kitchen={kitchensData[1]} styleLabel={ts(kitchensData[1].style)} minHeight="230px" revealDelay={0.12} />
-          <KitchenItem kitchen={kitchensData[2]} styleLabel={ts(kitchensData[2].style)} minHeight="230px" revealDelay={0.2} />
-        </motion.div>
+          <KitchenItem kitchen={kitchensData[1]} styleLabel={ts(kitchensData[1].style)} minHeight="230px" />
+          <KitchenItem kitchen={kitchensData[2]} styleLabel={ts(kitchensData[2].style)} minHeight="230px" />
+        </div>
 
         {/* Footer link */}
         <div className="mt-8 flex justify-end">

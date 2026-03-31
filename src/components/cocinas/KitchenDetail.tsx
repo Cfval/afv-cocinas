@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import Lightbox from 'yet-another-react-lightbox'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
@@ -27,42 +26,28 @@ export default function KitchenDetail({ kitchen }: { kitchen: Kitchen }) {
       <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
 
         {/* Image gallery */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
+        <div className="mb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {/* First image — large */}
             <button
-              className="col-span-2 row-span-2 relative overflow-hidden group"
+              className="col-span-2 row-span-2 relative overflow-hidden group img-placeholder"
               onClick={() => setLightboxIndex(0)}
               style={{ minHeight: '360px', cursor: 'zoom-in' }}
             >
-              <div className="absolute inset-0 img-shimmer" />
-              <motion.div
-                className="absolute inset-0"
-                initial={{ clipPath: 'inset(0 0 100% 0)' }}
-                whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
-              >
-                <Image
-                  src={kitchen.images[0]}
-                  alt={translatedName}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  onLoad={() => setLoaded((prev) => ({ ...prev, [kitchen.images[0]]: true }))}
-                  style={{
-                    objectFit: 'cover',
-                    transition: 'transform 0.7s ease, opacity 0.2s ease',
-                    opacity: loaded[kitchen.images[0]] ? 1 : 0,
-                  }}
-                  className="group-hover:scale-[1.03]"
-                />
-              </motion.div>
+              <Image
+                src={kitchen.images[0]}
+                alt={translatedName}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 66vw"
+                onLoad={() => setLoaded((prev) => ({ ...prev, [kitchen.images[0]]: true }))}
+                style={{
+                  objectFit: 'cover',
+                  opacity: loaded[kitchen.images[0]] ? 1 : 0,
+                  transition: 'opacity 0.4s ease, transform 0.7s ease',
+                }}
+                className="group-hover:scale-[1.03]"
+              />
               <div
                 className="absolute bottom-0 right-0 p-3"
                 style={{ color: 'rgba(201,169,110,0.8)', fontSize: '12px', fontFamily: 'var(--font-sans)' }}
@@ -75,36 +60,23 @@ export default function KitchenDetail({ kitchen }: { kitchen: Kitchen }) {
             {kitchen.images.slice(1, 5).map((src, i) => (
               <button
                 key={i}
-                className="relative overflow-hidden group"
+                className="relative overflow-hidden group img-placeholder"
                 onClick={() => setLightboxIndex(i + 1)}
                 style={{ minHeight: '175px', cursor: 'zoom-in' }}
               >
-                <div className="absolute inset-0 img-shimmer" />
-                <motion.div
-                  className="absolute inset-0"
-                  initial={{ clipPath: 'inset(0 0 100% 0)' }}
-                  whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{
-                    duration: 0.78,
-                    ease: [0.22, 1, 0.36, 1],
-                    delay: Math.min(i * 0.08, 0.25),
+                <Image
+                  src={src}
+                  alt={`${translatedName} — foto ${i + 2}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  onLoad={() => setLoaded((prev) => ({ ...prev, [src]: true }))}
+                  style={{
+                    objectFit: 'cover',
+                    opacity: loaded[src] ? 1 : 0,
+                    transition: 'opacity 0.4s ease, transform 0.7s ease',
                   }}
-                >
-                  <Image
-                    src={src}
-                    alt={`${translatedName} — foto ${i + 2}`}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    onLoad={() => setLoaded((prev) => ({ ...prev, [src]: true }))}
-                    style={{
-                      objectFit: 'cover',
-                      transition: 'transform 0.7s ease, opacity 0.2s ease',
-                      opacity: loaded[src] ? 1 : 0,
-                    }}
-                    className="group-hover:scale-[1.04]"
-                  />
-                </motion.div>
+                  className="group-hover:scale-[1.04]"
+                />
                 {i === 3 && kitchen.images.length > 5 && (
                   <div
                     className="absolute inset-0 flex items-center justify-center"
@@ -118,17 +90,12 @@ export default function KitchenDetail({ kitchen }: { kitchen: Kitchen }) {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main content */}
-          <motion.div
-            className="lg:col-span-2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
-          >
+          <div className="lg:col-span-2">
             {/* Style badge */}
             <span
               style={{
@@ -178,14 +145,10 @@ export default function KitchenDetail({ kitchen }: { kitchen: Kitchen }) {
             <Link href="/presupuesto" className="btn-primary">
               {t('similarCta')}
             </Link>
-          </motion.div>
+          </div>
 
           {/* Technical specs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.25 }}
-          >
+          <div>
             <div
               style={{
                 backgroundColor: '#1A1A17',
@@ -247,7 +210,7 @@ export default function KitchenDetail({ kitchen }: { kitchen: Kitchen }) {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

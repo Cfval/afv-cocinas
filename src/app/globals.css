@@ -54,23 +54,9 @@
   color: #F2F0E8;
 }
 
-/* Shimmer placeholder for images */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.img-shimmer {
-  background: linear-gradient(
-    90deg,
-    #1A1A17 0%,
-    #1A1A17 40%,
-    rgba(201, 169, 110, 0.06) 50%,
-    #1A1A17 60%,
-    #1A1A17 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.8s ease-in-out infinite;
+/* Placeholder background for images before load */
+.img-placeholder {
+  background-color: #1A1A17;
 }
 
 /* Base */

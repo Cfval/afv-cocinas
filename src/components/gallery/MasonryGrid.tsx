@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Lightbox from 'yet-another-react-lightbox'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
@@ -38,38 +37,25 @@ export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
             style={{ breakInside: 'avoid', marginBottom: '12px', display: 'block' }}
           >
             <button
-              className="relative w-full overflow-hidden group block"
+              className="relative w-full overflow-hidden group block img-placeholder"
               onClick={() => setLightboxIndex(i)}
               style={{ aspectRatio: aspects[i % aspects.length], cursor: 'zoom-in' }}
             >
-              <div className="absolute inset-0 img-shimmer" />
-              <motion.div
-                className="absolute inset-0"
-                initial={{ clipPath: 'inset(0 0 100% 0)' }}
-                whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{
-                  duration: 0.65,
-                  ease: [0.22, 1, 0.36, 1],
-                  delay: Math.min((i % PAGE_SIZE) * 0.03, 0.2),
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                priority={i < 3}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
+                quality={85}
+                onLoad={() => setLoaded((prev) => ({ ...prev, [img.src]: true }))}
+                style={{
+                  objectFit: 'cover',
+                  opacity: loaded[img.src] ? 1 : 0,
+                  transition: 'opacity 0.4s ease, transform 0.7s ease',
                 }}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  priority={i < 3}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
-                  quality={85}
-                  onLoad={() => setLoaded((prev) => ({ ...prev, [img.src]: true }))}
-                  style={{
-                    objectFit: 'cover',
-                    transition: 'transform 0.7s ease, opacity 0.2s ease',
-                    opacity: loaded[img.src] ? 1 : 0,
-                  }}
-                  className="group-hover:scale-[1.04]"
-                />
-              </motion.div>
+                className="group-hover:scale-[1.04]"
+              />
               {/* Hover overlay */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
