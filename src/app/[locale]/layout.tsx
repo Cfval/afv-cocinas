@@ -8,6 +8,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import CookieBanner from '@/components/layout/CookieBanner'
+import ScrollToTop from '@/components/layout/ScrollToTop'
 import '@/app/globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -127,6 +128,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
           <WhatsAppButton />
+          <ScrollToTop />
           <CookieBanner />
         </NextIntlClientProvider>
       </body>

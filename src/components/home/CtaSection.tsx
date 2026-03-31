@@ -8,14 +8,14 @@ export default function CtaSection() {
 
   return (
     <section
-      className="py-24 md:py-32"
+      className="py-16 md:py-24"
       style={{
         backgroundColor: '#0E0E0C',
         borderTop: '0.5px solid rgba(201,169,110,0.1)',
       }}
     >
       <div
-        className="mx-auto px-8 text-center"
+        className="mx-auto px-5 md:px-8 text-center"
         style={{ maxWidth: '640px' }}
       >
         {/* Tag */}
@@ -44,9 +44,8 @@ export default function CtaSection() {
             marginBottom: '20px',
           }}
         >
-          {t('heading')}
-          <br />
-          <em style={{ color: '#C9A96E', fontStyle: 'italic' }}>{t('headingEm')}</em>
+          {t('heading')}{' '}
+          <span className="block"><em style={{ color: '#C9A96E', fontStyle: 'italic' }}>{t('headingEm')}</em></span>
         </h2>
 
         {/* Description */}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname } from '@/lib/navigation'
@@ -8,9 +8,22 @@ import Logo from '@/components/layout/Logo'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const t = useTranslations('navbar')
   const locale = useLocale()
   const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   const navLinks = [
     { href: '/' as const, label: t('home') },
@@ -23,14 +36,17 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md"
+      <header
+        className="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500"
         style={{
-          backgroundColor: 'rgba(14, 14, 12, 0.92)',
-          borderColor: 'rgba(139, 116, 68, 0.2)',
+          backgroundColor: scrolled ? 'rgba(14, 14, 12, 0.95)' : 'rgba(14, 14, 12, 0.4)',
+          borderColor: scrolled ? 'rgba(139, 116, 68, 0.2)' : 'rgba(139, 116, 68, 0.08)',
+          backdropFilter: scrolled ? 'blur(12px)' : 'blur(6px)',
+          WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'blur(6px)',
         }}
       >
-        <div className="mx-auto flex items-center justify-between px-8 h-16"
-          style={{ maxWidth: '1280px' }}
+        <div className="mx-auto flex items-center justify-between h-16"
+          style={{ maxWidth: '1280px', paddingLeft: 'max(20px, env(safe-area-inset-left))', paddingRight: 'max(20px, env(safe-area-inset-right))' }}
         >
           {/* Logo */}
           <Link href="/" aria-label="AFV Cocinas — Inicio">
@@ -39,27 +55,48 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm transition-colors duration-300"
-                style={{
-                  fontFamily: 'var(--font-sans)',
-                  fontWeight: 400,
-                  color: '#9C9A8E',
-                  letterSpacing: '0.05em',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#F2F0E8')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#9C9A8E')}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === '/'
+                ? pathname === '/'
+                : pathname.startsWith(link.href)
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm transition-colors duration-300 relative"
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontWeight: isActive ? 500 : 400,
+                    color: isActive ? '#C9A96E' : '#9C9A8E',
+                    letterSpacing: '0.05em',
+                    paddingBottom: '4px',
+                  }}
+                  onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = '#F2F0E8' }}
+                  onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = '#9C9A8E' }}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span
+                      style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '16px',
+                        height: '2px',
+                        backgroundColor: '#C9A96E',
+                        borderRadius: '1px',
+                      }}
+                    />
+                  )}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Right: language switcher + CTA + Hamburger */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-shrink-0">
             {/* Language switcher — desktop */}
             <div className="hidden md:flex items-center gap-1"
               style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '2px' }}
@@ -67,18 +104,18 @@ export default function Navbar() {
               {locale === 'es' ? (
                 <span style={{ color: '#C9A96E' }}>ES</span>
               ) : (
-                <Link href={pathname} locale="es" style={{ color: '#6B6A60', transition: 'color 0.2s' }}
+                <Link href={pathname} locale="es" style={{ color: '#85837B', transition: 'color 0.2s' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
                 >ES</Link>
               )}
               <span style={{ color: '#3A3A37' }}>/</span>
               {locale === 'en' ? (
                 <span style={{ color: '#C9A96E' }}>EN</span>
               ) : (
-                <Link href={pathname} locale="en" style={{ color: '#6B6A60', transition: 'color 0.2s' }}
+                <Link href={pathname} locale="en" style={{ color: '#85837B', transition: 'color 0.2s' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
                 >EN</Link>
               )}
             </div>
@@ -135,7 +172,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 flex flex-col pt-16 md:hidden"
             style={{ backgroundColor: '#0E0E0C' }}
           >
-            <nav className="flex flex-col items-center justify-center flex-1 gap-8 px-8">
+            <nav className="flex flex-col items-center justify-center flex-1 gap-8 px-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -168,13 +205,13 @@ export default function Navbar() {
                 {locale === 'es' ? (
                   <span style={{ color: '#C9A96E' }}>ES</span>
                 ) : (
-                  <Link href={pathname} locale="es" onClick={() => setMenuOpen(false)} style={{ color: '#6B6A60' }}>ES</Link>
+                  <Link href={pathname} locale="es" onClick={() => setMenuOpen(false)} style={{ color: '#85837B' }}>ES</Link>
                 )}
                 <span style={{ color: '#3A3A37' }}>/</span>
                 {locale === 'en' ? (
                   <span style={{ color: '#C9A96E' }}>EN</span>
                 ) : (
-                  <Link href={pathname} locale="en" onClick={() => setMenuOpen(false)} style={{ color: '#6B6A60' }}>EN</Link>
+                  <Link href={pathname} locale="en" onClick={() => setMenuOpen(false)} style={{ color: '#85837B' }}>EN</Link>
                 )}
               </div>
             </nav>

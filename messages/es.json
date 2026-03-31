@@ -36,6 +36,196 @@
       "notice": "Aviso legal",
       "privacy": "Privacidad",
       "cookies": "Cookies"
+    },
+    "legalPage": {
+      "notice": {
+        "metaTitle": "Aviso Legal | AFV Cocinas",
+        "metaDescription": "Aviso legal de AFV Cocinas. Información sobre el titular y condiciones de uso.",
+        "title": "Aviso Legal",
+        "subtitle": "Última actualización: marzo 2026",
+        "section1": {
+          "title": "1. Datos del titular",
+          "intro": "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, se facilitan los siguientes datos:",
+          "ownerLabel": "Titular:",
+          "ownerName": "Alberto F.V.",
+          "activityLabel": "Actividad:",
+          "activityValue": "Montaje, diseño y reforma de cocinas",
+          "addressLabel": "Dirección:",
+          "addressValue": "Provincia de Alicante, España",
+          "emailLabel": "Email:",
+          "emailValue": "info@afvcocinas.es",
+          "phoneLabel": "Teléfono:",
+          "phoneValue": "+34 600 000 000"
+        },
+        "section2": {
+          "title": "2. Objeto del sitio web",
+          "text": "AFV Cocinas tiene por objeto presentar los servicios profesionales de montaje, diseño y reforma de cocinas, y facilitar el contacto entre el profesional y clientes potenciales. El uso del sitio implica aceptación de estas condiciones."
+        },
+        "section3": {
+          "title": "3. Propiedad intelectual e industrial",
+          "text1": "Todos los contenidos del sitio web son propiedad del titular o de terceros con autorización.",
+          "text2": "Queda prohibida la reproducción, distribución o transformación sin autorización expresa."
+        },
+        "section4": {
+          "title": "4. Responsabilidad",
+          "text1": "El titular no se responsabiliza de daños por el uso del sitio o la presencia de virus.",
+          "text2": "Los presupuestos orientativos son informativos y no constituyen oferta contractual."
+        },
+        "section5": {
+          "title": "5. Legislación aplicable y jurisdicción",
+          "text": "La Ley española es aplicable. Cualquier controversia se somete a los Juzgados de Alicante."
+        }
+      },
+      "privacy": {
+        "metaTitle": "Política de Privacidad | AFV Cocinas",
+        "metaDescription": "Política de privacidad de AFV Cocinas y tratamiento de datos personales.",
+        "title": "Política de Privacidad",
+        "subtitle": "Última actualización: marzo 2026",
+        "section1": {
+          "title": "1. Responsable del tratamiento",
+          "text": "Responsable: Alberto F.V.\nDirección: Provincia de Alicante, España\nEmail: info@afvcocinas.es"
+        },
+        "section2": {
+          "title": "2. Datos que recopilamos",
+          "items": ["Nombre y apellidos", "Correo electrónico", "Número de teléfono", "Población de residencia", "Datos del proyecto de cocina"]
+        },
+        "section3": {
+          "title": "3. Finalidad del tratamiento",
+          "items": ["Gestionar solicitudes de información y presupuesto", "Comunicarse sobre el proyecto", "Enviar contenido comercial con consentimiento"]
+        },
+        "section4": {
+          "title": "4. Base legal",
+          "items": ["Ejecución de medidas precontractuales", "Consentimiento para comunicaciones comerciales", "Interés legítimo para consultas generales"]
+        },
+        "section5": {
+          "title": "5. Conservación de datos",
+          "text": "Los datos se conservan mientras sean necesarios para atender tu solicitud y, en su caso, los plazos legales. Presupuestos y contratos: 5 años."
+        },
+        "section6": {
+          "title": "6. Comunicación a terceros",
+          "text": "No se ceden datos a terceros salvo obligación legal. Resend es encargado de tratamiento para email."
+        },
+        "section7": {
+          "title": "7. Derechos",
+          "items": ["Acceso", "Rectificación", "Supresión", "Portabilidad", "Oposición y limitación"],
+          "contact": "Para ejercer derechos, escribe a info@afvcocinas.es con asunto 'Protección de datos'."
+        }
+      },
+      "cookies": {
+        "metaTitle": "Política de Cookies | AFV Cocinas",
+        "metaDescription": "Política de cookies de AFV Cocinas. Uso y gestión de cookies.",
+        "title": "Política de Cookies",
+        "subtitle": "Última actualización: marzo 2026",
+        "section1": { "title": "1. ¿Qué son las cookies?", "text": "Son archivos de texto que el navegador guarda para recordar tu visita y mejorar la experiencia." },
+        "section2": { "title": "2. Cookies que utilizamos" },
+        "cookieTable": [
+          { "name": "afv-cookies", "type": "Técnica", "duration": "1 año", "purpose": "Guarda tu preferencia de aceptación o rechazo" },
+          { "name": "_ga", "type": "Analítica", "duration": "2 años", "purpose": "Google Analytics — tráfico (solo si aceptas)" },
+          { "name": "_ga_*", "type": "Analítica", "duration": "2 años", "purpose": "Google Analytics — identificador de sesión (solo si aceptas)" }
+        ],
+        "section3": { "title": "3. Cookies técnicas (necesarias)", "text": "Son imprescindibles para el funcionamiento y no requieren consentimiento." },
+        "section4": { "title": "4. Cookies analíticas", "text": "Se usan para medir visitas y mejorar el sitio. Se activan solo con consentimiento." },
+        "section5": { "title": "5. Cómo gestionar o eliminar las cookies", "text": "Configura tu navegador para rechazar cookies o avisarte cuando se envían.", "note": "También puedes revocar tu consentimiento en cualquier momento borrando las cookies de tu navegador o usando el botón ‘Rechazar’ del banner de cookies." },
+        "section6": { "title": "6. Más información", "text": "Consulta info@afvcocinas.es o www.aepd.es." },
+        "tableHeaders": { "name": "Nombre", "type": "Tipo", "duration": "Duración", "purpose": "Finalidad" }
+      }
+    }
+  },
+  "legalPage": {
+    "notice": {
+      "metaTitle": "Aviso Legal | AFV Cocinas",
+      "metaDescription": "Aviso legal de AFV Cocinas. Información sobre el titular y condiciones de uso.",
+      "title": "Aviso Legal",
+      "subtitle": "Última actualización: marzo 2026",
+      "section1": {
+        "title": "1. Datos del titular",
+        "intro": "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, se facilitan los siguientes datos:",
+        "ownerLabel": "Titular:",
+        "ownerName": "Alberto F.V.",
+        "activityLabel": "Actividad:",
+        "activityValue": "Montaje, diseño y reforma de cocinas",
+        "addressLabel": "Dirección:",
+        "addressValue": "Provincia de Alicante, España",
+        "emailLabel": "Email:",
+        "emailValue": "info@afvcocinas.es",
+        "phoneLabel": "Teléfono:",
+        "phoneValue": "+34 600 000 000"
+      },
+      "section2": {
+        "title": "2. Objeto del sitio web",
+        "text": "AFV Cocinas tiene por objeto presentar los servicios profesionales de montaje, diseño y reforma de cocinas, y facilitar el contacto entre el profesional y clientes potenciales. El uso del sitio implica aceptación de estas condiciones."
+      },
+      "section3": {
+        "title": "3. Propiedad intelectual e industrial",
+        "text1": "Todos los contenidos del sitio web son propiedad del titular o de terceros con autorización.",
+        "text2": "Queda prohibida la reproducción, distribución o transformación sin autorización expresa."
+      },
+      "section4": {
+        "title": "4. Responsabilidad",
+        "text1": "El titular no se responsabiliza de daños por el uso del sitio o la presencia de virus.",
+        "text2": "Los presupuestos orientativos son informativos y no constituyen oferta contractual."
+      },
+      "section5": {
+        "title": "5. Legislación aplicable y jurisdicción",
+        "text": "La Ley española es aplicable. Cualquier controversia se somete a los Juzgados de Alicante."
+      }
+    },
+    "privacy": {
+      "metaTitle": "Política de Privacidad | AFV Cocinas",
+      "metaDescription": "Política de privacidad de AFV Cocinas y tratamiento de datos personales.",
+      "title": "Política de Privacidad",
+      "subtitle": "Última actualización: marzo 2026",
+      "section1": {
+        "title": "1. Responsable del tratamiento",
+        "text": "Responsable: Alberto F.V.\nDirección: Provincia de Alicante, España\nEmail: info@afvcocinas.es"
+      },
+      "section2": {
+        "title": "2. Datos que recopilamos",
+        "text": "Los datos procesados se limitan a los campos necesarios para solicitudes de presupuesto.",
+        "items": ["Nombre y apellidos", "Correo electrónico", "Número de teléfono", "Población de residencia", "Datos del proyecto de cocina"]
+      },
+      "section3": {
+        "title": "3. Finalidad del tratamiento",
+        "text": "Los datos se tratan para las siguientes finalidades:",
+        "items": ["Gestionar solicitudes de información y presupuesto", "Comunicarse sobre el proyecto", "Enviar contenido comercial con consentimiento"]
+      },
+      "section4": {
+        "title": "4. Base legal",
+        "text": "La base legal del tratamiento es:",
+        "items": ["Ejecución de medidas precontractuales", "Consentimiento para comunicaciones comerciales", "Interés legítimo para consultas generales"]
+      },
+      "section5": {
+        "title": "5. Conservación de datos",
+        "text": "Los datos se conservan mientras sean necesarios para atender tu solicitud y, en su caso, los plazos legales. Presupuestos y contratos: 5 años."
+      },
+      "section6": {
+        "title": "6. Comunicación a terceros",
+        "text": "No se ceden datos a terceros salvo obligación legal. Resend es encargado de tratamiento para email."
+      },
+      "section7": {
+        "title": "7. Derechos",
+        "text": "El titular de los datos tiene los siguientes derechos:",
+        "items": ["Acceso", "Rectificación", "Supresión", "Portabilidad", "Oposición y limitación"],
+        "contact": "Para ejercer derechos, escribe a info@afvcocinas.es con asunto 'Protección de datos'."
+      }
+    },
+    "cookies": {
+      "metaTitle": "Política de Cookies | AFV Cocinas",
+      "metaDescription": "Política de cookies de AFV Cocinas. Uso y gestión de cookies.",
+      "title": "Política de Cookies",
+      "subtitle": "Última actualización: marzo 2026",
+      "section1": { "title": "1. ¿Qué son las cookies?", "text": "Son archivos de texto que el navegador guarda para recordar tu visita y mejorar la experiencia." },
+      "section2": { "title": "2. Cookies que utilizamos", "text": "Estas cookies guardan preferencia y estado de consentimiento del usuario." },
+      "cookieTable": [
+        { "name": "afv-cookies", "type": "Técnica", "duration": "1 año", "purpose": "Guarda tu preferencia de aceptación o rechazo" },
+        { "name": "_ga", "type": "Analítica", "duration": "2 años", "purpose": "Google Analytics — tráfico (solo si aceptas)" },
+        { "name": "_ga_*", "type": "Analítica", "duration": "2 años", "purpose": "Google Analytics — identificador de sesión (solo si aceptas)" }
+      ],
+      "section3": { "title": "3. Cookies técnicas (necesarias)", "text": "Son imprescindibles para el funcionamiento y no requieren consentimiento." },
+      "section4": { "title": "4. Cookies analíticas", "text": "Se usan para medir visitas y mejorar el sitio. Se activan solo con consentimiento." },
+      "section5": { "title": "5. Cómo gestionar o eliminar las cookies", "text": "Configura tu navegador para rechazar cookies o avisarte cuando se envían.", "note": "También puedes revocar tu consentimiento en cualquier momento borrando las cookies de tu navegador o usando el botón ‘Rechazar’ del banner de cookies." },
+      "section6": { "title": "6. Más información", "text": "Consulta info@afvcocinas.es o www.aepd.es." },
+      "tableHeaders": { "name": "Nombre", "type": "Tipo", "duration": "Duración", "purpose": "Finalidad" }
     }
   },
   "whatsapp": {
@@ -114,7 +304,7 @@
     "story": {
       "tag": "Mi historia",
       "heading": "Más de 15 años transformando cocinas en Alicante",
-      "p1": "Me llamo Alberto y llevo más de 15 años dedicándome al montaje y diseño de cocinas en la provincia de Alicante. Lo que comenzó como un oficio aprendido junto a mi padre se ha convertido en mi pasión y mi forma de vida.",
+      "p1": "Me llamo Alberto y llevo más de 15 años dedicándome al montaje y diseño de cocinas en la provincia de Alicante. Lo que comenzó como un oficio aprendido junto a mi tio se ha convertido en mi pasión y mi forma de vida.",
       "p2": "A lo largo de estos años he montado más de 500 cocinas, desde reformas íntimas en pisos pequeños hasta grandes instalaciones en viviendas de lujo. Cada proyecto es único, y me comprometo a tratarlo como si fuera mi propia casa.",
       "p3": "Trabajo directamente con las mejores marcas del mercado, lo que me permite ofrecer materiales de primera calidad a precios competitivos. Sin intermediarios, sin sorpresas."
     },
@@ -214,7 +404,9 @@
     },
     "beforeAfter": {
       "tag": "Transformaciones",
-      "heading": "El cambio habla por sí solo"
+      "heading": "El cambio habla por sí solo",
+      "before": "Antes",
+      "after": "Después"
     },
     "portfolio": {
       "tag": "Trabajos realizados",
@@ -222,7 +414,47 @@
     },
     "testimonials": {
       "tag": "Testimonios",
-      "heading": "Lo que dicen nuestros clientes"
+      "heading": "Lo que dicen nuestros clientes",
+      "items": {
+        "1": {
+          "quote": "Desde el primer momento supimos que habíamos elegido bien. Alberto vino a medir, propuso ideas que no habíamos contemplado y el resultado final superó todas nuestras expectativas. La cocina es sencillamente perfecta."
+        },
+        "2": {
+          "quote": "Llevábamos años pensando en reformar la cocina y siempre lo aplazábamos. Finalmente nos decidimos y no podemos estar más contentos. Trabajo impecable, puntual y con un nivel de detalle que no esperábamos a ese precio."
+        }
+      }
+    },
+    "kitchens": {
+      "compacta-isla-marmol": {
+        "name": "Cocina compacta abierta con isla",
+        "description": "Cocina compacta de diseño minimalista con isla central y encimera de mármol. Frentes sin tiradores en acabado mate que maximizan la limpieza visual del espacio. Un proyecto donde la funcionalidad y la elegancia se fusionan en cada detalle.",
+        "materials": "Lacado mate sin tiradores, encimera mármol blanco"
+      },
+      "elegante-isla-vistas-mar": {
+        "name": "Cocina elegante con isla",
+        "description": "Cocina abierta con isla de gran formato y acabados de primera calidad. La combinación de madera natural y superficies lacadas crea un ambiente cálido y sofisticado. Diseñada para disfrutar de la cocina con vistas privilegiadas.",
+        "materials": "Madera natural, lacado blanco mate, encimera cuarzo"
+      },
+      "moderna-blanca-peninsula": {
+        "name": "Cocina moderna con península",
+        "description": "Cocina de líneas limpias con península integrada que amplía la zona de trabajo y sirve como barra de desayuno. Acabados en blanco mate con encimera de cuarzo que aportan luminosidad al espacio. Un diseño moderno y funcional para el día a día.",
+        "materials": "Lacado blanco mate, encimera cuarzo blanco"
+      },
+      "moderna-taupe-mesa": {
+        "name": "Cocina moderna en taupe con mesa",
+        "description": "Cocina en tonos taupe con mesa integrada que invita a reunir a la familia. Los acabados cálidos y la distribución pensada crean un espacio acogedor sin renunciar a la modernidad. Materiales de alta durabilidad para un uso intensivo.",
+        "materials": "Laminado taupe, encimera compacto mineral, mesa lacada"
+      },
+      "negra-madera-roble": {
+        "name": "Cocina negra con madera de roble",
+        "description": "Contraste impactante entre los frentes negros mate y la madera de roble natural. Un diseño audaz que equilibra lo contemporáneo con lo orgánico para crear una cocina de gran personalidad. Acabados de primera calidad para un resultado duradero.",
+        "materials": "Lacado negro mate, chapa de roble natural, encimera compacto"
+      },
+      "verde-salvia-marmol": {
+        "name": "Cocina verde salvia con mármol",
+        "description": "Cocina en verde salvia con encimera de mármol blanco que aporta carácter y distinción al espacio. Un color tendencia que transforma la estancia en un ambiente único y lleno de personalidad. La combinación con el mármol eleva el conjunto a un nivel premium.",
+        "materials": "Lacado verde salvia mate, encimera mármol blanco"
+      }
     },
     "bottomCta": {
       "heading": "¿No encuentras lo que buscas?",
@@ -268,7 +500,13 @@
     },
     "tag": "Trabajos realizados",
     "heading": "Galería",
-    "description": "Una selección de nuestros proyectos más recientes en la provincia de Alicante."
+    "description": "Una selección de nuestros proyectos más recientes en la provincia de Alicante.",
+    "loadMore": "Ver más trabajos",
+    "portfolioLink": {
+      "tag": "Portfolio",
+      "heading": "Nuestras cocinas",
+      "cta": "Ver proyectos"
+    }
   },
   "presupuesto": {
     "meta": {
@@ -468,5 +706,10 @@
     "moreInfo": "Más información",
     "accept": "Aceptar todo",
     "reject": "Rechazar"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La URL que has abierto no existe o ya no está disponible. Puedes volver al inicio y seguir explorando nuestros proyectos.",
+    "cta": "Volver al inicio →"
   }
 }

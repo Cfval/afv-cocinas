@@ -87,7 +87,7 @@ export default function ParallaxSection({ phraseKey }: ParallaxSectionProps) {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-8">
+      <div className="relative z-10 text-center px-5 md:px-8">
         {/* Decorative dash */}
         <div
           style={{

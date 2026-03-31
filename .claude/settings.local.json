@@ -30,7 +30,8 @@
       "Bash(echo \"=== $d ===\")",
       "Read(//c/micros/afv-cocinas/public/images/cocinas/$d/**)",
       "Bash(powershell -Command \"Get-ChildItem 'C:\\\\micros\\\\afv-cocinas\\\\public\\\\images\\\\galeria' | Select-Object Name\" 2>&1)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(identify C:/micros/afv-cocinas/public/images/galeria/1.jpeg)"
     ]
   }
 }

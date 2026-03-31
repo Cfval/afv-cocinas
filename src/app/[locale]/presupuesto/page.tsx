@@ -35,7 +35,7 @@ export default async function PresupuestoPage({ params }: Props) {
   return (
     <section style={{ backgroundColor: '#0E0E0C', paddingBottom: '80px' }}>
       {/* Header */}
-      <div className="text-center px-8 pt-20 pb-14" style={{ backgroundColor: '#0E0E0C' }}>
+      <div className="text-center px-5 md:px-8 pt-32 md:pt-36 pb-14" style={{ backgroundColor: '#0E0E0C' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
           {t('tag')}
         </p>
@@ -61,7 +61,7 @@ export default async function PresupuestoPage({ params }: Props) {
       </div>
 
       {/* Form */}
-      <div className="mx-auto px-8" style={{ maxWidth: '720px' }}>
+      <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '720px' }}>
         <BudgetForm />
       </div>
 
@@ -69,7 +69,7 @@ export default async function PresupuestoPage({ params }: Props) {
       <div style={{ width: '60px', height: '0.5px', backgroundColor: 'rgba(201,169,110,0.25)', margin: '80px auto 0' }} />
 
       {/* Budget Calculator */}
-      <div className="mx-auto px-8" style={{ maxWidth: '760px', paddingTop: '80px', paddingBottom: '96px' }}>
+      <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '760px', paddingTop: '80px', paddingBottom: '96px' }}>
         <div className="text-center" style={{ marginBottom: '48px' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
             {t('calculatorTag')}

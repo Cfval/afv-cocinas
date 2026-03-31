@@ -30,7 +30,7 @@ export default function Footer() {
       }}
     >
       <div
-        className="mx-auto px-8 py-16"
+        className="mx-auto px-5 md:px-8 py-16"
         style={{ maxWidth: '1280px' }}
       >
         {/* Main grid */}
@@ -44,7 +44,7 @@ export default function Footer() {
             <p
               className="text-sm leading-relaxed"
               style={{
-                color: '#6B6A60',
+                color: '#85837B',
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 300,
                 whiteSpace: 'pre-line',
@@ -58,9 +58,9 @@ export default function Footer() {
                 href="#"
                 aria-label="Instagram"
                 className="transition-colors duration-300"
-                style={{ color: '#6B6A60' }}
+                style={{ color: '#85837B' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -72,9 +72,9 @@ export default function Footer() {
                 href="#"
                 aria-label="Facebook"
                 className="transition-colors duration-300"
-                style={{ color: '#6B6A60' }}
+                style={{ color: '#85837B' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -102,12 +102,12 @@ export default function Footer() {
                 href={link.href}
                 className="text-sm transition-colors duration-300"
                 style={{
-                  color: '#6B6A60',
+                  color: '#85837B',
                   fontFamily: 'var(--font-sans)',
                   fontWeight: 400,
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#9C9A8E')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
               >
                 {link.label}
               </Link>
@@ -129,25 +129,25 @@ export default function Footer() {
             </p>
             <p
               className="text-sm"
-              style={{ color: '#6B6A60', fontFamily: 'var(--font-sans)', fontWeight: 400 }}
+              style={{ color: '#85837B', fontFamily: 'var(--font-sans)', fontWeight: 400 }}
             >
               {t('location')}
             </p>
             <a
               href="tel:+34600000000"
               className="text-sm transition-colors duration-300"
-              style={{ color: '#6B6A60', fontFamily: 'var(--font-sans)' }}
+              style={{ color: '#85837B', fontFamily: 'var(--font-sans)' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
             >
               +34 600 000 000
             </a>
             <a
               href="mailto:info@afvcocinas.es"
               className="text-sm transition-colors duration-300"
-              style={{ color: '#6B6A60', fontFamily: 'var(--font-sans)' }}
+              style={{ color: '#85837B', fontFamily: 'var(--font-sans)' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#C9A96E')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
             >
               info@afvcocinas.es
             </a>
@@ -177,7 +177,7 @@ export default function Footer() {
         >
           <p
             className="text-xs"
-            style={{ color: '#6B6A60', fontFamily: 'var(--font-sans)' }}
+            style={{ color: '#85837B', fontFamily: 'var(--font-sans)' }}
           >
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
@@ -187,9 +187,9 @@ export default function Footer() {
                 key={link.href}
                 href={link.href}
                 className="text-xs transition-colors duration-300"
-                style={{ color: '#6B6A60', fontFamily: 'var(--font-sans)' }}
+                style={{ color: '#85837B', fontFamily: 'var(--font-sans)' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#9C9A8E')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B6A60')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#85837B')}
               >
                 {link.label}
               </Link>

@@ -45,7 +45,7 @@ export default function KitchenGrid({ kitchens }: { kitchens: Kitchen[] }) {
           className="text-center py-16"
           style={{
             fontFamily: 'var(--font-sans)',
-            color: '#6B6A60',
+            color: '#85837B',
             fontSize: '15px',
           }}
         >

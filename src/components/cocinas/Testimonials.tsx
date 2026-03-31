@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { Testimonial } from '@/data/testimonials'
 
 interface TestimonialsProps {
@@ -8,6 +9,8 @@ interface TestimonialsProps {
 }
 
 export default function Testimonials({ testimonials }: TestimonialsProps) {
+  const tCocinas = useTranslations('cocinas.testimonials')
+
   return (
     <div
       style={{
@@ -64,7 +67,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
               paddingTop: '32px',
             }}
           >
-            &ldquo;{t.quote}&rdquo;
+            &ldquo;{tCocinas(`items.${t.id}.quote`)}&rdquo;
           </p>
 
           {/* Separator */}
@@ -95,7 +98,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 300,
                 fontSize: '12px',
-                color: '#6B6A60',
+                color: '#85837B',
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
               }}

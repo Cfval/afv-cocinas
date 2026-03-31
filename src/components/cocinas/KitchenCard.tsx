@@ -9,6 +9,8 @@ import type { Kitchen } from '@/data/kitchens'
 export default function KitchenCard({ kitchen }: { kitchen: Kitchen }) {
   const [hovered, setHovered] = useState(false)
   const ts = useTranslations('cocinas.styleLabels')
+  const tk = useTranslations('cocinas.kitchens')
+  const translatedName = tk(`${kitchen.slug}.name`)
 
   return (
     <Link
@@ -22,7 +24,7 @@ export default function KitchenCard({ kitchen }: { kitchen: Kitchen }) {
       <div className="absolute inset-0">
         <Image
           src={kitchen.images[0]}
-          alt={kitchen.name}
+          alt={translatedName}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
@@ -69,7 +71,7 @@ export default function KitchenCard({ kitchen }: { kitchen: Kitchen }) {
             lineHeight: 1.3,
           }}
         >
-          {kitchen.name}
+          {translatedName}
         </p>
       </div>
 

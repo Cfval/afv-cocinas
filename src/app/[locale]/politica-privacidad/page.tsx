@@ -1,69 +1,71 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LegalLayout from '@/components/legal/LegalLayout'
 
 type Props = { params: Promise<{ locale: string }> }
 
-export const metadata: Metadata = {
-  title: 'Política de Privacidad',
-  description: 'Política de privacidad de AFV Cocinas. Cómo tratamos tus datos personales conforme al RGPD.',
-  robots: { index: false },
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'legalPage' })
+  return {
+    title: t('privacy.metaTitle'),
+    description: t('privacy.metaDescription'),
+    robots: { index: false },
+  }
 }
 
 export default async function PoliticaPrivacidadPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'legalPage' })
+  const section2Items = t.raw('privacy.section2.items') as string[]
+  const section3Items = t.raw('privacy.section3.items') as string[]
+  const section4Items = t.raw('privacy.section4.items') as string[]
+  const section7Items = t.raw('privacy.section7.items') as string[]
+
   return (
-    <LegalLayout title="Política de Privacidad" subtitle="Última actualización: marzo 2026">
-      <LegalSection title="1. Responsable del tratamiento">
-        <p><strong>Responsable:</strong> [Nombre completo del profesional]<br />
-          <strong>NIF/NIE:</strong> [Número de identificación fiscal]<br />
-          <strong>Dirección:</strong> Provincia de Alicante, España<br />
-          <strong>Email:</strong> info@afvcocinas.es</p>
+    <LegalLayout title={t('privacy.title')} subtitle={t('privacy.subtitle')}>
+      <LegalSection title={t('privacy.section1.title')}>
+        <p>{t('privacy.section1.text')}</p>
       </LegalSection>
-      <LegalSection title="2. Datos que recopilamos">
-        <p>A través de los formularios del sitio web (formulario de contacto y solicitud de presupuesto) podemos recopilar los siguientes datos personales:</p>
+      <LegalSection title={t('privacy.section2.title')}>
+        <p>{t('privacy.section2.text')}</p>
         <ul>
-          <li>Nombre y apellidos</li>
-          <li>Correo electrónico</li>
-          <li>Número de teléfono</li>
-          <li>Población de residencia</li>
-          <li>Información sobre el proyecto de cocina (descripción, fotografías, planos)</li>
+          {section2Items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </LegalSection>
-      <LegalSection title="3. Finalidad del tratamiento">
-        <p>Los datos personales recopilados se utilizan para las siguientes finalidades:</p>
+      <LegalSection title={t('privacy.section3.title')}>
+        <p>{t('privacy.section3.text')}</p>
         <ul>
-          <li>Gestionar y responder a las solicitudes de información y presupuesto</li>
-          <li>Comunicarnos contigo sobre tu proyecto</li>
-          <li>Enviar información comercial sobre nuestros servicios, siempre que hayas dado tu consentimiento</li>
+          {section3Items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </LegalSection>
-      <LegalSection title="4. Base legal del tratamiento">
-        <p>El tratamiento de tus datos se realiza sobre las siguientes bases legales:</p>
+      <LegalSection title={t('privacy.section4.title')}>
+        <p>{t('privacy.section4.text')}</p>
         <ul>
-          <li><strong>Ejecución de un contrato o medidas precontractuales:</strong> para gestionar tu solicitud de presupuesto.</li>
-          <li><strong>Consentimiento:</strong> para el envío de comunicaciones comerciales.</li>
-          <li><strong>Interés legítimo:</strong> para responder a consultas de información general.</li>
+          {section4Items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </LegalSection>
-      <LegalSection title="5. Conservación de los datos">
-        <p>Los datos personales se conservarán durante el tiempo necesario para atender tu solicitud y, en su caso, durante los plazos legalmente establecidos. Los datos de presupuestos y contratos se conservarán durante 5 años tras la finalización de la relación comercial.</p>
+      <LegalSection title={t('privacy.section5.title')}>
+        <p>{t('privacy.section5.text')}</p>
       </LegalSection>
-      <LegalSection title="6. Comunicación a terceros">
-        <p>Los datos personales no se cederán a terceros, salvo obligación legal. Para el envío de correos electrónicos utilizamos el servicio Resend, que actúa como encargado del tratamiento bajo las condiciones establecidas en el RGPD.</p>
+      <LegalSection title={t('privacy.section6.title')}>
+        <p>{t('privacy.section6.text')}</p>
       </LegalSection>
-      <LegalSection title="7. Tus derechos">
-        <p>Puedes ejercer los siguientes derechos respecto a tus datos personales:</p>
+      <LegalSection title={t('privacy.section7.title')}>
+        <p>{t('privacy.section7.text')}</p>
         <ul>
-          <li><strong>Acceso:</strong> conocer qué datos tenemos sobre ti.</li>
-          <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
-          <li><strong>Supresión:</strong> solicitar la eliminación de tus datos.</li>
-          <li><strong>Portabilidad:</strong> recibir tus datos en formato estructurado.</li>
-          <li><strong>Oposición y limitación:</strong> oponerte al tratamiento o solicitar su limitación.</li>
+          {section7Items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        <p>Para ejercer estos derechos, envíanos un email a <strong>info@afvcocinas.es</strong> con el asunto «Protección de datos».</p>
-        <p>Si consideras que tus derechos no han sido atendidos correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <strong>www.aepd.es</strong>.</p>
+        <p>{t('privacy.section7.contact')}</p>
       </LegalSection>
     </LegalLayout>
   )

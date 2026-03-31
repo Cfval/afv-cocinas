@@ -32,7 +32,7 @@ function PlaceholderImage({ alt, tone }: { alt: string; tone: 'dark' | 'medium' 
           fontFamily: 'var(--font-sans)',
           fontWeight: 300,
           fontSize: '11px',
-          color: '#6B6A60',
+          color: '#85837B',
           textAlign: 'center',
           lineHeight: 1.5,
         }}

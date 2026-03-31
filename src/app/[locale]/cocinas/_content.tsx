@@ -70,7 +70,7 @@ export default function CocinasContent() {
           />
           <div className="absolute inset-0" style={{ backgroundColor: 'rgba(14,14,12,0.42)' }} />
         </div>
-        <div className="relative z-10 mx-auto px-8 py-20" style={{ maxWidth: '1280px' }}>
+        <div className="relative z-10 mx-auto px-5 md:px-8 py-20" style={{ maxWidth: '1280px' }}>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,8 +103,8 @@ export default function CocinasContent() {
       </section>
 
       {/* Por qué elegirnos — Values */}
-      <section className="py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-12">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('whyUs.tag')}
@@ -136,8 +136,8 @@ export default function CocinasContent() {
       </section>
 
       {/* Editorial */}
-      <section className="py-24" style={{ backgroundColor: '#0E0E0C' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#0E0E0C' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -178,8 +178,8 @@ export default function CocinasContent() {
       </section>
 
       {/* Before / After */}
-      <section className="py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-12 text-center">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('beforeAfter.tag')}
@@ -192,18 +192,20 @@ export default function CocinasContent() {
             <BeforeAfter
               before={{ src: '', alt: 'Cocina antes de la reforma — cocina antigua con muebles en mal estado' }}
               after={{ src: '', alt: 'Cocina después de la reforma — cocina moderna con acabado blanco' }}
+              labels={{ before: t('beforeAfter.before'), after: t('beforeAfter.after') }}
             />
             <BeforeAfter
               before={{ src: '', alt: 'Cocina antes — muebles rústicos oscuros' }}
               after={{ src: '', alt: 'Cocina después — diseño minimalista con isla' }}
+              labels={{ before: t('beforeAfter.before'), after: t('beforeAfter.after') }}
             />
           </div>
         </div>
       </section>
 
       {/* Kitchen grid */}
-      <section id="portfolio" className="py-24" style={{ backgroundColor: '#0E0E0C', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section id="portfolio" className="py-16 md:py-24" style={{ backgroundColor: '#0E0E0C', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-12">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('portfolio.tag')}
@@ -217,8 +219,8 @@ export default function CocinasContent() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-12">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('testimonials.tag')}
@@ -232,8 +234,8 @@ export default function CocinasContent() {
       </section>
 
       {/* CTA bottom */}
-      <section className="py-20 text-center" style={{ backgroundColor: '#0E0E0C', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '600px' }}>
+      <section className="py-16 md:py-20 text-center" style={{ backgroundColor: '#0E0E0C', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '600px' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(22px, 2.8vw, 34px)', color: '#F2F0E8', lineHeight: 1.25, marginBottom: '16px' }}>
             {t('bottomCta.heading')}
           </h2>

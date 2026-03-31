@@ -34,12 +34,12 @@ export default async function BlogPage({ params }: Props) {
         style={{
           backgroundColor: '#0E0E0C',
           backgroundImage: 'radial-gradient(ellipse at 70% 50%, rgba(201,169,110,0.04) 0%, transparent 60%)',
-          paddingTop: '96px',
+          paddingTop: '128px',
           paddingBottom: '64px',
           borderBottom: '0.5px solid rgba(201,169,110,0.08)',
         }}
       >
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '20px' }}>
             {t('tag')}
           </p>
@@ -54,7 +54,7 @@ export default async function BlogPage({ params }: Props) {
 
       {/* Posts grid */}
       <section style={{ backgroundColor: '#0E0E0C', paddingTop: '64px', paddingBottom: '96px' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <PostList posts={posts} />
         </div>
       </section>

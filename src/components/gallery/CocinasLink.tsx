@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/navigation'
 
 export default function CocinasLink() {
   const [hovered, setHovered] = useState(false)
+  const t = useTranslations('galeria.portfolioLink')
 
   return (
     <Link
@@ -53,7 +55,7 @@ export default function CocinasLink() {
             marginBottom: '8px',
           }}
         >
-          Portfolio
+          {t('tag')}
         </p>
         <p
           style={{
@@ -64,7 +66,7 @@ export default function CocinasLink() {
             lineHeight: 1.1,
           }}
         >
-          Nuestras cocinas
+          {t('heading')}
         </p>
       </div>
 
@@ -86,11 +88,11 @@ export default function CocinasLink() {
             fontSize: '11px',
             letterSpacing: '2px',
             textTransform: 'uppercase',
-            color: hovered ? '#C9A96E' : '#6B6A60',
+            color: hovered ? '#C9A96E' : '#85837B',
             transition: 'color 0.3s ease',
           }}
         >
-          Ver proyectos
+          {t('cta')}
         </span>
         <div
           style={{

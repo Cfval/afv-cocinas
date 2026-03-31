@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-8 max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-5 md:px-8 max-w-3xl mx-auto">
         {/* Tag */}
         <motion.p
           {...fadeUp(0)}
@@ -59,14 +59,13 @@ export default function Hero() {
             fontWeight: 400,
             fontSize: 'clamp(36px, 5.5vw, 64px)',
             lineHeight: 1.1,
-            color: '#edecec',
+            color: '#F2F0E8',
             textShadow: '0 2px 20px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.5)',
             marginBottom: '24px',
           }}
         >
-          {t('headline')}
-          <br />
-          <em style={{ fontStyle: 'italic', color: '#C9A96E' }}>{t('headlineEm')}</em>
+          {t('headline')}{' '}
+          <span className="block"><em style={{ fontStyle: 'italic', color: '#C9A96E' }}>{t('headlineEm')}</em></span>
         </motion.h1>
 
         {/* Description */}
@@ -78,7 +77,7 @@ export default function Hero() {
             fontWeight: 400,
             fontSize: '16px',
             lineHeight: 1.75,
-            color: '#e6e6e6',
+            color: '#F2F0E8',
             textShadow: 'none',
             marginBottom: '40px',
           }}
@@ -101,6 +100,42 @@ export default function Hero() {
           background: 'linear-gradient(to bottom, transparent, #0E0E0C)',
         }}
       />
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1.4 }}
+        aria-hidden="true"
+      >
+        <span
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 500,
+            fontSize: '9px',
+            letterSpacing: '3px',
+            textTransform: 'uppercase',
+            color: 'rgba(201,169,110,0.6)',
+          }}
+        >
+          Scroll
+        </span>
+        <motion.svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#C9A96E"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <path d="M7 10l5 5 5-5" />
+        </motion.svg>
+      </motion.div>
     </section>
   )
 }

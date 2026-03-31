@@ -36,6 +36,196 @@
       "notice": "Legal notice",
       "privacy": "Privacy",
       "cookies": "Cookies"
+    },
+    "legalPage": {
+      "notice": {
+        "metaTitle": "Legal Notice | AFV Cocinas",
+        "metaDescription": "Legal notice of AFV Cocinas. Owner information and terms of use.",
+        "title": "Legal Notice",
+        "subtitle": "Last update: March 2026",
+        "section1": {
+          "title": "1. Owner details",
+          "intro": "In compliance with article 10 of Law 34/2002 on Information Society Services and Electronic Commerce, the following details are provided:",
+          "ownerLabel": "Owner:",
+          "ownerName": "Alberto F.V.",
+          "activityLabel": "Activity:",
+          "activityValue": "Kitchen installation, design and renovation",
+          "addressLabel": "Address:",
+          "addressValue": "Alicante province, Spain",
+          "emailLabel": "Email:",
+          "emailValue": "info@afvcocinas.es",
+          "phoneLabel": "Phone:",
+          "phoneValue": "+34 600 000 000"
+        },
+        "section2": {
+          "title": "2. Website purpose",
+          "text": "AFV Cocinas is intended to present professional kitchen installation, design and renovation services and to enable contact between the professional and potential clients. Use of the website implies acceptance of these terms."
+        },
+        "section3": {
+          "title": "3. Intellectual and industrial property",
+          "text1": "All website contents are owned by the owner or by third parties with authorization.",
+          "text2": "Reproduction, distribution or transformation are prohibited without express permission."
+        },
+        "section4": {
+          "title": "4. Liability",
+          "text1": "The owner is not responsible for damages caused by website use or the presence of viruses.",
+          "text2": "Indicative estimates are for information only and are not a contractual offer."
+        },
+        "section5": {
+          "title": "5. Applicable law and jurisdiction",
+          "text": "These legal terms are governed by Spanish law. Disputes are submitted to Alicante courts."
+        }
+      },
+      "privacy": {
+        "metaTitle": "Privacy Policy | AFV Cocinas",
+        "metaDescription": "AFV Cocinas privacy policy and personal data processing.",
+        "title": "Privacy Policy",
+        "subtitle": "Last update: March 2026",
+        "section1": {
+          "title": "1. Data controller",
+          "text": "Data controller: Alberto F.V.\nAddress: Alicante province, Spain\nEmail: info@afvcocinas.es"
+        },
+        "section2": {
+          "title": "2. Data collected",
+          "items": ["Full name", "Email", "Phone number", "City", "Project details"]
+        },
+        "section3": {
+          "title": "3. Purpose",
+          "items": ["Manage info and quote requests", "Communicate about project", "Send commercial info with consent"]
+        },
+        "section4": {
+          "title": "4. Legal basis",
+          "items": ["Pre-contractual measures", "Consent for marketing", "Legitimate interest for general inquiries"]
+        },
+        "section5": {
+          "title": "5. Data retention",
+          "text": "Data is retained while necessary for the request and in legally required periods. Quotes and contracts: 5 years."
+        },
+        "section6": {
+          "title": "6. Third-party sharing",
+          "text": "Data is not shared with third parties except legal obligation. Resend is data processor for emails."
+        },
+        "section7": {
+          "title": "7. Rights",
+          "items": ["Access", "Rectification", "Deletion", "Portability", "Objection and restriction"],
+          "contact": "To exercise rights, email info@afvcocinas.es with subject 'Data protection'."
+        }
+      },
+      "cookies": {
+        "metaTitle": "Cookie Policy | AFV Cocinas",
+        "metaDescription": "AFV Cocinas cookie policy. Cookies usage and management.",
+        "title": "Cookie Policy",
+        "subtitle": "Last update: March 2026",
+        "section1": { "title": "1. What are cookies?", "text": "Cookies are text files saved by the browser to remember your visit and improve experience." },
+        "section2": { "title": "2. Cookies we use" },
+        "cookieTable": [
+          { "name": "afv-cookies", "type": "Technical", "duration": "1 year", "purpose": "Stores cookie preferences" },
+          { "name": "_ga", "type": "Analytics", "duration": "2 years", "purpose": "Google Analytics traffic (only with consent)" },
+          { "name": "_ga_*", "type": "Analytics", "duration": "2 years", "purpose": "Google Analytics session identifier (only with consent)" }
+        ],
+        "section3": { "title": "3. Technical cookies (required)", "text": "Technical cookies are required for proper functioning and do not need consent." },
+        "section4": { "title": "4. Analytics cookies", "text": "Analytics cookies measure visits and improve the site. Activated only with consent." },
+        "section5": { "title": "5. Manage or delete cookies", "text": "Configure your browser to reject cookies or notify you on cookie submission.", "note": "You may revoke consent at any time by clearing your browser cookies or using the banner 'Reject' button." },
+        "section6": { "title": "6. More information", "text": "Contact info@afvcocinas.es or visit www.aepd.es." },
+        "tableHeaders": { "name": "Name", "type": "Type", "duration": "Duration", "purpose": "Purpose" }
+      }
+    }
+  },
+  "legalPage": {
+    "notice": {
+      "metaTitle": "Legal Notice | AFV Cocinas",
+      "metaDescription": "Legal notice of AFV Cocinas. Owner information and terms of use.",
+      "title": "Legal Notice",
+      "subtitle": "Last update: March 2026",
+      "section1": {
+        "title": "1. Owner details",
+        "intro": "In compliance with article 10 of Law 34/2002 on Information Society Services and Electronic Commerce, the following details are provided:",
+        "ownerLabel": "Owner:",
+        "ownerName": "Alberto F.V.",
+        "activityLabel": "Activity:",
+        "activityValue": "Kitchen installation, design and renovation",
+        "addressLabel": "Address:",
+        "addressValue": "Alicante province, Spain",
+        "emailLabel": "Email:",
+        "emailValue": "info@afvcocinas.es",
+        "phoneLabel": "Phone:",
+        "phoneValue": "+34 600 000 000"
+      },
+      "section2": {
+        "title": "2. Website purpose",
+        "text": "AFV Cocinas is intended to present professional kitchen installation, design and renovation services and to enable contact between the professional and potential clients. Use of the website implies acceptance of these terms."
+      },
+      "section3": {
+        "title": "3. Intellectual and industrial property",
+        "text1": "All website contents are owned by the owner or by third parties with authorization.",
+        "text2": "Reproduction, distribution or transformation are prohibited without express permission."
+      },
+      "section4": {
+        "title": "4. Liability",
+        "text1": "The owner is not responsible for damages caused by website use or the presence of viruses.",
+        "text2": "Indicative estimates are for information only and are not a contractual offer."
+      },
+      "section5": {
+        "title": "5. Applicable law and jurisdiction",
+        "text": "These legal terms are governed by Spanish law. Disputes are submitted to Alicante courts."
+      }
+    },
+    "privacy": {
+      "metaTitle": "Privacy Policy | AFV Cocinas",
+      "metaDescription": "AFV Cocinas privacy policy and personal data processing.",
+      "title": "Privacy Policy",
+      "subtitle": "Last update: March 2026",
+      "section1": {
+        "title": "1. Data controller",
+        "text": "Data controller: Alberto F.V.\nAddress: Alicante province, Spain\nEmail: info@afvcocinas.es"
+      },
+      "section2": {
+        "title": "2. Data collected",
+        "text": "The data processed is limited to the fields required for quote requests.",
+        "items": ["Full name", "Email", "Phone number", "City", "Project details"]
+      },
+      "section3": {
+        "title": "3. Purpose",
+        "text": "Data is processed for the following purposes:",
+        "items": ["Manage info and quote requests", "Communicate about project", "Send commercial info with consent"]
+      },
+      "section4": {
+        "title": "4. Legal basis",
+        "text": "The legal basis for processing is:",
+        "items": ["Pre-contractual measures", "Consent for marketing", "Legitimate interest for general inquiries"]
+      },
+      "section5": {
+        "title": "5. Data retention",
+        "text": "Data is retained while necessary for the request and in legally required periods. Quotes and contracts: 5 years."
+      },
+      "section6": {
+        "title": "6. Third-party sharing",
+        "text": "Data is not shared with third parties except legal obligation. Resend is data processor for emails."
+      },
+      "section7": {
+        "title": "7. Rights",
+        "text": "The data subject has the following rights:",
+        "items": ["Access", "Rectification", "Deletion", "Portability", "Objection and restriction"],
+        "contact": "To exercise rights, email info@afvcocinas.es with subject 'Data protection'."
+      }
+    },
+    "cookies": {
+      "metaTitle": "Cookie Policy | AFV Cocinas",
+      "metaDescription": "AFV Cocinas cookie policy. Cookies usage and management.",
+      "title": "Cookie Policy",
+      "subtitle": "Last update: March 2026",
+      "section1": { "title": "1. What are cookies?", "text": "Cookies are text files saved by the browser to remember your visit and improve experience." },
+      "section2": { "title": "2. Cookies we use", "text": "These cookies are used to store user preferences and manage consent status." },
+      "cookieTable": [
+        { "name": "afv-cookies", "type": "Technical", "duration": "1 year", "purpose": "Stores cookie preferences" },
+        { "name": "_ga", "type": "Analytics", "duration": "2 years", "purpose": "Google Analytics traffic (only with consent)" },
+        { "name": "_ga_*", "type": "Analytics", "duration": "2 years", "purpose": "Google Analytics session identifier (only with consent)" }
+      ],
+      "section3": { "title": "3. Technical cookies (required)", "text": "Technical cookies are required for proper functioning and do not need consent." },
+      "section4": { "title": "4. Analytics cookies", "text": "Analytics cookies measure visits and improve the site. Activated only with consent." },
+      "section5": { "title": "5. Manage or delete cookies", "text": "Configure your browser to reject cookies or notify you on cookie submission.", "note": "You may revoke consent at any time by clearing your browser cookies or using the banner 'Reject' button." },
+      "section6": { "title": "6. More information", "text": "Contact info@afvcocinas.es or visit www.aepd.es." },
+      "tableHeaders": { "name": "Name", "type": "Type", "duration": "Duration", "purpose": "Purpose" }
     }
   },
   "whatsapp": {
@@ -114,7 +304,7 @@
     "story": {
       "tag": "My story",
       "heading": "Over 15 years transforming kitchens in Alicante",
-      "p1": "My name is Alberto and I have spent over 15 years dedicated to kitchen installation and design in the province of Alicante. What began as a trade learned alongside my father has become my passion and my way of life.",
+      "p1": "My name is Alberto and I have spent over 15 years dedicated to kitchen installation and design in the province of Alicante. What began as a trade learned alongside my uncle has become my passion and my way of life.",
       "p2": "Over the years I have installed more than 500 kitchens, from intimate renovations in small flats to large installations in luxury homes. Every project is unique, and I am committed to treating it as if it were my own home.",
       "p3": "I work directly with the best brands on the market, which allows me to offer premium-quality materials at competitive prices. No middlemen, no surprises."
     },
@@ -214,7 +404,9 @@
     },
     "beforeAfter": {
       "tag": "Transformations",
-      "heading": "The change speaks for itself"
+      "heading": "The change speaks for itself",
+      "before": "Before",
+      "after": "After"
     },
     "portfolio": {
       "tag": "Completed projects",
@@ -222,7 +414,47 @@
     },
     "testimonials": {
       "tag": "Testimonials",
-      "heading": "What our clients say"
+      "heading": "What our clients say",
+      "items": {
+        "1": {
+          "quote": "From the very first moment, we knew we had chosen well. Alberto came to measure, suggested ideas we had not considered, and the final result exceeded all our expectations. The kitchen is simply perfect."
+        },
+        "2": {
+          "quote": "We had been thinking about renovating the kitchen for years and always postponed it. In the end we decided to do it and we could not be happier. Impeccable work, punctual, and with a level of detail we did not expect at that price."
+        }
+      }
+    },
+    "kitchens": {
+      "compacta-isla-marmol": {
+        "name": "Compact open kitchen with island",
+        "description": "A compact minimalist kitchen with a central island and marble worktop. Handleless matte fronts maximize visual cleanliness in the space. A project where functionality and elegance blend in every detail.",
+        "materials": "Handleless matte lacquer, white marble worktop"
+      },
+      "elegante-isla-vistas-mar": {
+        "name": "Elegant kitchen with island",
+        "description": "Open-plan kitchen with a large-format island and premium finishes. The combination of natural wood and lacquered surfaces creates a warm and sophisticated atmosphere. Designed to enjoy cooking with privileged views.",
+        "materials": "Natural wood, matte white lacquer, quartz worktop"
+      },
+      "moderna-blanca-peninsula": {
+        "name": "Modern kitchen with peninsula",
+        "description": "Clean-lined kitchen with an integrated peninsula that expands the work area and serves as a breakfast bar. Matte white finishes with a quartz worktop bring brightness to the space. A modern and practical design for everyday life.",
+        "materials": "Matte white lacquer, white quartz worktop"
+      },
+      "moderna-taupe-mesa": {
+        "name": "Modern taupe kitchen with table",
+        "description": "Taupe-toned kitchen with an integrated table designed to bring the family together. Warm finishes and a thoughtful layout create a cozy space without sacrificing modernity. High-durability materials for intensive daily use.",
+        "materials": "Taupe laminate, mineral compact worktop, lacquered table"
+      },
+      "negra-madera-roble": {
+        "name": "Black kitchen with oak wood",
+        "description": "Striking contrast between matte black fronts and natural oak wood. A bold design that balances contemporary and organic styles to create a kitchen full of personality. Premium finishes for a durable result.",
+        "materials": "Matte black lacquer, natural oak veneer, compact worktop"
+      },
+      "verde-salvia-marmol": {
+        "name": "Sage green kitchen with marble",
+        "description": "Sage green kitchen with a white marble worktop that brings character and distinction to the space. A trend-forward color that transforms the room into a unique setting full of personality. The marble pairing elevates the entire design to a premium level.",
+        "materials": "Matte sage green lacquer, white marble worktop"
+      }
     },
     "bottomCta": {
       "heading": "Can't find what you're looking for?",
@@ -268,7 +500,13 @@
     },
     "tag": "Completed projects",
     "heading": "Gallery",
-    "description": "A selection of our most recent projects in the province of Alicante."
+    "description": "A selection of our most recent projects in the province of Alicante.",
+    "loadMore": "Load more",
+    "portfolioLink": {
+      "tag": "Portfolio",
+      "heading": "Our kitchens",
+      "cta": "View projects"
+    }
   },
   "presupuesto": {
     "meta": {
@@ -468,5 +706,10 @@
     "moreInfo": "More information",
     "accept": "Accept all",
     "reject": "Reject"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The URL you opened does not exist or is no longer available. You can go back to the homepage and keep exploring our projects.",
+    "cta": "Back to home →"
   }
 }

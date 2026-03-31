@@ -51,19 +51,19 @@ export default async function BlogPostPage({ params }: Props) {
         style={{
           backgroundColor: '#0E0E0C',
           backgroundImage: 'radial-gradient(ellipse at 60% 40%, rgba(201,169,110,0.05) 0%, transparent 55%)',
-          paddingTop: '96px',
+          paddingTop: '128px',
           paddingBottom: '56px',
           borderBottom: '0.5px solid rgba(201,169,110,0.08)',
         }}
       >
-        <div className="mx-auto px-8" style={{ maxWidth: '768px' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '768px' }}>
           <Link
             href="/blog"
             style={{
               fontFamily: 'var(--font-sans)',
               fontWeight: 400,
               fontSize: '13px',
-              color: '#6B6A60',
+              color: '#85837B',
               textDecoration: 'none',
               display: 'inline-flex',
               alignItems: 'center',
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(28px, 4vw, 48px)', color: '#F2F0E8', lineHeight: 1.15, marginBottom: '20px' }}>
             {post.title}
           </h1>
-          <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: '13px', color: '#6B6A60', letterSpacing: '0.5px' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: '13px', color: '#85837B', letterSpacing: '0.5px' }}>
             {formatDate(post.date)}
           </p>
         </div>
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Article content */}
       <article style={{ backgroundColor: '#0E0E0C', paddingTop: '64px', paddingBottom: '96px' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '768px' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '768px' }}>
           <PostContent components={mdxComponents} />
           <div style={{ height: '0.5px', backgroundColor: 'rgba(201,169,110,0.1)', margin: '56px 0 48px' }} />
           <Link href="/blog" className="btn-outline" style={{ display: 'inline-block' }}>

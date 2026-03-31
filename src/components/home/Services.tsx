@@ -38,10 +38,10 @@ export default function Services() {
 
   return (
     <section
-      className="py-24 md:py-32"
+      className="py-16 md:py-24"
       style={{ backgroundColor: '#0E0E0C' }}
     >
-      <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
         {/* Header */}
         <div className="mb-14">
           <p

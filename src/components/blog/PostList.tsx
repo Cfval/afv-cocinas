@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { Post } from '@/lib/mdx'
 import PostCard from './PostCard'
 
@@ -6,6 +7,8 @@ interface PostListProps {
 }
 
 export default function PostList({ posts }: PostListProps) {
+  const t = useTranslations('blog')
+
   if (posts.length === 0) {
     return (
       <p
@@ -13,12 +16,12 @@ export default function PostList({ posts }: PostListProps) {
           fontFamily: 'var(--font-sans)',
           fontWeight: 300,
           fontSize: '15px',
-          color: '#6B6A60',
+          color: '#85837B',
           textAlign: 'center',
           padding: '60px 0',
         }}
       >
-        No hay artículos publicados todavía.
+        {t('noPosts')}
       </p>
     )
   }
@@ -31,8 +34,8 @@ export default function PostList({ posts }: PostListProps) {
         gap: '24px',
       }}
     >
-      {posts.map((post) => (
-        <PostCard key={post.slug} post={post} />
+      {posts.map((post, i) => (
+        <PostCard key={post.slug} post={post} index={i} />
       ))}
     </div>
   )

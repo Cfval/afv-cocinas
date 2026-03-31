@@ -45,7 +45,7 @@ export default function SobreMiContent() {
       {/* Hero */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '60vh', backgroundColor: '#0E0E0C' }}>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #1A1A17 0%, #0E0E0C 100%)', backgroundImage: 'radial-gradient(ellipse at 60% 40%, rgba(201,169,110,0.05) 0%, transparent 60%)' }} />
-        <div className="relative z-10 text-center px-8">
+        <div className="relative z-10 text-center px-5 md:px-8">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}
             style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '20px' }}>
             {t('hero.tag')}
@@ -60,8 +60,8 @@ export default function SobreMiContent() {
       </section>
 
       {/* Historia */}
-      <section className="py-24" style={{ backgroundColor: '#0E0E0C' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#0E0E0C' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '20px' }}>
@@ -84,7 +84,7 @@ export default function SobreMiContent() {
               ].map((item) => (
                 <div key={item.label} style={{ borderLeft: '2px solid rgba(201,169,110,0.3)', paddingLeft: '24px' }}>
                   <p style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', color: '#C9A96E', lineHeight: 1, marginBottom: '6px' }}>{item.value}</p>
-                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', color: '#6B6A60' }}>{item.label}</p>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', color: '#9C9A8E' }}>{item.label}</p>
                 </div>
               ))}
             </div>
@@ -93,8 +93,8 @@ export default function SobreMiContent() {
       </section>
 
       {/* Valores */}
-      <section className="py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-14">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('values.tag')}
@@ -119,8 +119,8 @@ export default function SobreMiContent() {
       </section>
 
       {/* Proceso */}
-      <section className="py-24" style={{ backgroundColor: '#0E0E0C' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#0E0E0C' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <div className="mb-14 text-center">
             <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
               {t('process.tag')}
@@ -139,7 +139,7 @@ export default function SobreMiContent() {
                     {step.number}
                   </div>
                   <h3 style={{ fontFamily: 'var(--font-serif)', fontWeight: 500, fontSize: '18px', color: '#F2F0E8', marginBottom: '10px' }}>{step.title}</h3>
-                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60', lineHeight: 1.65 }}>{step.description}</p>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#9C9A8E', lineHeight: 1.65 }}>{step.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -149,7 +149,7 @@ export default function SobreMiContent() {
 
       {/* CTA */}
       <section className="py-24 text-center" style={{ backgroundColor: '#1A1A17', borderTop: '0.5px solid rgba(201,169,110,0.08)' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '600px' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '600px' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(26px, 3.5vw, 40px)', color: '#F2F0E8', lineHeight: 1.2, marginBottom: '16px' }}>
             {t('cta.heading')}
           </h2>

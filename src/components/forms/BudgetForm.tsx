@@ -316,10 +316,10 @@ export default function BudgetForm() {
             <polyline points="17 8 12 3 7 8" />
             <line x1="12" y1="3" x2="12" y2="15" />
           </svg>
-          <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60' }}>
+          <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#85837B' }}>
             {t('filesDragText')} <span style={{ color: '#C9A96E' }}>{t('filesClickText')}</span>
           </span>
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', color: '#6B6A60' }}>
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', color: '#85837B' }}>
             {t('filesHint')}
           </span>
           <input type="file" multiple accept=".jpg,.jpeg,.png,.pdf" className="hidden" onChange={handleFileChange} />
@@ -364,7 +364,7 @@ export default function BudgetForm() {
               style={{
                 fontFamily: 'var(--font-sans)',
                 fontSize: '11px',
-                color: '#6B6A60',
+                color: '#85837B',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
@@ -394,7 +394,7 @@ export default function BudgetForm() {
           fontFamily: 'var(--font-sans)',
           fontWeight: 300,
           fontSize: '12px',
-          color: '#6B6A60',
+          color: '#85837B',
           textAlign: 'center',
           marginTop: '16px',
         }}

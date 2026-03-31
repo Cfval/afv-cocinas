@@ -34,7 +34,7 @@ function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
   const count = useCounter(stat.value ?? 0, 1800, active && stat.value !== null)
 
   return (
-    <div className="flex flex-col items-center text-center px-6 py-10 md:py-0">
+    <div className="flex flex-col items-center text-center px-4 py-10 md:py-14">
       <div
         style={{
           fontFamily: 'var(--font-serif)',
@@ -56,7 +56,7 @@ function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
           fontSize: '11px',
           letterSpacing: '3px',
           textTransform: 'uppercase',
-          color: '#6B6A60',
+          color: '#9C9A8E',
         }}
       >
         {stat.label}
@@ -94,13 +94,15 @@ export default function Stats() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="relative"
-              style={{
-                borderRight:
-                  i < stats.length - 1
-                    ? '0.5px solid rgba(201,169,110,0.12)'
-                    : 'none',
-              }}
+              className={[
+                'relative',
+                /* Right border: on mobile only left column (even index); on desktop all except last */
+                i % 2 === 0 ? 'border-r' : '',
+                i < stats.length - 1 && i % 2 !== 0 ? 'md:border-r' : '',
+                /* Bottom border on mobile for top row */
+                i < 2 ? 'border-b md:border-b-0' : '',
+              ].join(' ')}
+              style={{ borderColor: 'rgba(201,169,110,0.12)' }}
             >
               <StatItem stat={stat} active={isInView} />
             </div>

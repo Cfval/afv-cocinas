@@ -15,13 +15,18 @@ function KitchenItem({
   styleLabel,
   className,
   minHeight,
+  revealDelay = 0,
 }: {
   kitchen: (typeof kitchensData)[number]
   styleLabel: string
   className?: string
   minHeight?: string
+  revealDelay?: number
 }) {
   const [hovered, setHovered] = useState(false)
+  const [loaded, setLoaded] = useState(false)
+  const tk = useTranslations('cocinas.kitchens')
+  const translatedName = tk(`${kitchen.slug}.name`)
 
   return (
     <Link
@@ -31,15 +36,29 @@ function KitchenItem({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <div className="absolute inset-0 img-shimmer" />
       {/* Real image */}
-      <Image
-        src={kitchen.images[0]}
-        alt={kitchen.name}
-        fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover transition-transform duration-700"
-        style={{ transform: hovered ? 'scale(1.04)' : 'scale(1)' }}
-      />
+      <motion.div
+        className="absolute inset-0"
+        initial={{ clipPath: 'inset(0 0 100% 0)' }}
+        whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: revealDelay }}
+      >
+        <Image
+          src={kitchen.images[0]}
+          alt={translatedName}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-700"
+          onLoad={() => setLoaded(true)}
+          style={{
+            transform: hovered ? 'scale(1.04)' : 'scale(1)',
+            opacity: loaded ? 1 : 0,
+            transition: 'transform 0.7s ease, opacity 0.2s ease',
+          }}
+        />
+      </motion.div>
 
       {/* Overlay gradient */}
       <div
@@ -80,7 +99,7 @@ function KitchenItem({
             lineHeight: 1.3,
           }}
         >
-          {kitchen.name}
+          {translatedName}
         </p>
       </div>
 
@@ -106,8 +125,8 @@ export default function FeaturedWork() {
   const ts = useTranslations('cocinas.styleLabels')
 
   return (
-    <section className="py-24 md:py-32" style={{ backgroundColor: '#0E0E0C' }}>
-      <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+    <section className="py-16 md:py-24" style={{ backgroundColor: '#0E0E0C' }}>
+      <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
         {/* Header */}
         <div className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
@@ -154,12 +173,13 @@ export default function FeaturedWork() {
               styleLabel={ts(kitchensData[0].style)}
               minHeight="480px"
               className="h-full"
+              revealDelay={0.05}
             />
           </div>
 
           {/* Two stacked items on right */}
-          <KitchenItem kitchen={kitchensData[1]} styleLabel={ts(kitchensData[1].style)} minHeight="230px" />
-          <KitchenItem kitchen={kitchensData[2]} styleLabel={ts(kitchensData[2].style)} minHeight="230px" />
+          <KitchenItem kitchen={kitchensData[1]} styleLabel={ts(kitchensData[1].style)} minHeight="230px" revealDelay={0.12} />
+          <KitchenItem kitchen={kitchensData[2]} styleLabel={ts(kitchensData[2].style)} minHeight="230px" revealDelay={0.2} />
         </motion.div>
 
         {/* Footer link */}

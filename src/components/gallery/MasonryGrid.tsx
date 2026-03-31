@@ -3,11 +3,13 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import Lightbox from 'yet-another-react-lightbox'
+import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
 
 const PAGE_SIZE = 12
-const heights = [220, 300, 260, 340, 200, 280, 320, 240, 360, 200, 290, 250]
+const aspects = ['3/4', '4/3', '3/4', '1/1', '4/5', '3/4', '16/9', '3/4', '4/5', '3/4', '4/3', '1/1']
 
 interface GalleryImage {
   src: string
@@ -17,6 +19,8 @@ interface GalleryImage {
 export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
   const [visible, setVisible] = useState(PAGE_SIZE)
   const [lightboxIndex, setLightboxIndex] = useState(-1)
+  const [loaded, setLoaded] = useState<Record<string, boolean>>({})
+  const t = useTranslations('galeria')
 
   const visibleImages = images.slice(0, visible)
   const hasMore = visible < images.length
@@ -29,31 +33,43 @@ export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
         className="[column-count:1] sm:[column-count:2] lg:[column-count:3]"
       >
         {visibleImages.map((img, i) => (
-          <motion.div
+          <div
             key={img.src}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              ease: 'easeOut' as const,
-              delay: Math.min((i % PAGE_SIZE) * 0.04, 0.4),
-            }}
             style={{ breakInside: 'avoid', marginBottom: '12px', display: 'block' }}
           >
             <button
               className="relative w-full overflow-hidden group block"
               onClick={() => setLightboxIndex(i)}
-              style={{ height: `${heights[i % heights.length]}px`, cursor: 'zoom-in' }}
+              style={{ aspectRatio: aspects[i % aspects.length], cursor: 'zoom-in' }}
             >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                priority={i === 0}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                style={{ objectFit: 'cover', transition: 'transform 0.7s ease' }}
-                className="group-hover:scale-[1.04]"
-              />
+              <div className="absolute inset-0 img-shimmer" />
+              <motion.div
+                className="absolute inset-0"
+                initial={{ clipPath: 'inset(0 0 100% 0)' }}
+                whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{
+                  duration: 0.65,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: Math.min((i % PAGE_SIZE) * 0.03, 0.2),
+                }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  priority={i < 3}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
+                  quality={85}
+                  onLoad={() => setLoaded((prev) => ({ ...prev, [img.src]: true }))}
+                  style={{
+                    objectFit: 'cover',
+                    transition: 'transform 0.7s ease, opacity 0.2s ease',
+                    opacity: loaded[img.src] ? 1 : 0,
+                  }}
+                  className="group-hover:scale-[1.04]"
+                />
+              </motion.div>
               {/* Hover overlay */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
@@ -64,7 +80,7 @@ export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
                 </svg>
               </div>
             </button>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -73,29 +89,9 @@ export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
         <div className="flex justify-center mt-12 mb-4">
           <button
             onClick={() => setVisible((v) => v + PAGE_SIZE)}
-            style={{
-              background: 'transparent',
-              border: '1px solid #C9A96E',
-              padding: '14px 32px',
-              cursor: 'pointer',
-              fontFamily: 'var(--font-sans)',
-              fontWeight: 500,
-              fontSize: '11px',
-              letterSpacing: '2.5px',
-              textTransform: 'uppercase',
-              color: '#C9A96E',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#C9A96E'
-              e.currentTarget.style.color = '#0E0E0C'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent'
-              e.currentTarget.style.color = '#C9A96E'
-            }}
+            className="btn-outline"
           >
-            Ver más trabajos
+            {t('loadMore')}
           </button>
         </div>
       )}
@@ -105,6 +101,7 @@ export default function MasonryGrid({ images }: { images: GalleryImage[] }) {
         index={lightboxIndex}
         close={() => setLightboxIndex(-1)}
         slides={slides}
+        plugins={[Zoom]}
       />
     </>
   )

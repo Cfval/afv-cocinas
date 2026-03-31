@@ -122,7 +122,7 @@ export default function BudgetCalculator() {
             >
               {t('stepOf', { step, total: totalSteps })}
             </span>
-            <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#6B6A60' }}>
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#85837B' }}>
               {Math.round((step / totalSteps) * 100)}%
             </span>
           </div>
@@ -165,7 +165,7 @@ export default function BudgetCalculator() {
               <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(20px, 2.5vw, 28px)', color: '#F2F0E8', marginBottom: '8px' }}>
                 {t('step1.question')}
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60', marginBottom: '40px' }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#85837B', marginBottom: '40px' }}>
                 {t('step1.hint')}
               </p>
 
@@ -195,7 +195,7 @@ export default function BudgetCalculator() {
                   accentColor: '#C9A96E',
                 }}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '8px', fontFamily: 'var(--font-sans)', fontSize: '12px', color: '#6B6A60' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '8px', fontFamily: 'var(--font-sans)', fontSize: '12px', color: '#85837B' }}>
                 <span>{t('step1.minLabel')}</span>
                 <span>{t('step1.maxLabel')}</span>
               </div>
@@ -215,7 +215,7 @@ export default function BudgetCalculator() {
               <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(20px, 2.5vw, 28px)', color: '#F2F0E8', marginBottom: '8px' }}>
                 {t('step2.question')}
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60', marginBottom: '28px' }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#85837B', marginBottom: '28px' }}>
                 {t('step2.hint')}
               </p>
 
@@ -236,7 +236,7 @@ export default function BudgetCalculator() {
                     <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 500, fontSize: '18px', color: state.encimera === opt.id ? '#C9A96E' : '#F2F0E8', marginBottom: '6px' }}>
                       {opt.label}
                     </p>
-                    <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '12px', color: '#6B6A60' }}>
+                    <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '12px', color: '#85837B' }}>
                       {opt.rango}
                     </p>
                   </button>
@@ -258,7 +258,7 @@ export default function BudgetCalculator() {
               <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(20px, 2.5vw, 28px)', color: '#F2F0E8', marginBottom: '8px' }}>
                 {t('step3.question')}
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60', marginBottom: '28px' }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#85837B', marginBottom: '28px' }}>
                 {t('step3.hint')}
               </p>
 
@@ -284,7 +284,7 @@ export default function BudgetCalculator() {
                       <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 500, fontSize: '18px', color: state.electrodomesticos === opt.id ? '#C9A96E' : '#F2F0E8', marginBottom: '4px' }}>
                         {opt.label}
                       </p>
-                      <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '13px', color: '#6B6A60' }}>
+                      <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '13px', color: '#85837B' }}>
                         {opt.sublabel}
                       </p>
                     </div>
@@ -312,7 +312,7 @@ export default function BudgetCalculator() {
               <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(20px, 2.5vw, 28px)', color: '#F2F0E8', marginBottom: '8px' }}>
                 {t('step4.question')}
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#6B6A60', marginBottom: '28px' }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '14px', color: '#85837B', marginBottom: '28px' }}>
                 {t('step4.hint')}
               </p>
 
@@ -333,7 +333,7 @@ export default function BudgetCalculator() {
                     <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 500, fontSize: '18px', color: state.trabajo === opt.id ? '#C9A96E' : '#F2F0E8', marginBottom: '4px' }}>
                       {opt.label}
                     </p>
-                    <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '13px', color: '#6B6A60' }}>
+                    <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '13px', color: '#85837B' }}>
                       {opt.sublabel}
                     </p>
                   </button>
@@ -362,7 +362,7 @@ export default function BudgetCalculator() {
               <p style={{ fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'clamp(32px, 6vw, 54px)', color: '#C9A96E', lineHeight: 1.1, marginBottom: '4px' }}>
                 {formatEuro(resultado.min)} – {formatEuro(resultado.max)}
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '12px', color: '#6B6A60', marginBottom: '36px', maxWidth: '420px', margin: '12px auto 40px', lineHeight: 1.6 }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 300, fontSize: '12px', color: '#85837B', marginBottom: '36px', maxWidth: '420px', margin: '12px auto 40px', lineHeight: 1.6 }}>
                 {t('result.disclaimer')}
               </p>
               <Link href="/presupuesto" className="btn-primary" style={{ display: 'inline-block' }}>
@@ -381,7 +381,7 @@ export default function BudgetCalculator() {
                     cursor: 'pointer',
                     fontFamily: 'var(--font-sans)',
                     fontSize: '12px',
-                    color: '#6B6A60',
+                    color: '#85837B',
                     letterSpacing: '1px',
                     padding: '8px',
                     textDecoration: 'underline',
@@ -442,7 +442,7 @@ export default function BudgetCalculator() {
               fontSize: '11px',
               letterSpacing: '2.5px',
               textTransform: 'uppercase',
-              color: canAdvance() ? '#0E0E0C' : '#6B6A60',
+              color: canAdvance() ? '#0E0E0C' : '#85837B',
               transition: 'all 0.3s ease',
             }}
           >

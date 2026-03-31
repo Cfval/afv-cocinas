@@ -46,8 +46,8 @@ export default async function GaleriaPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <section className="py-20 text-center" style={{ backgroundColor: '#0E0E0C' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1280px' }}>
+      <section className="pt-32 pb-16 md:pt-36 md:pb-24 text-center" style={{ backgroundColor: '#0E0E0C' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1280px' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '16px' }}>
             {t('tag')}
           </p>
@@ -61,8 +61,8 @@ export default async function GaleriaPage({ params }: Props) {
       </section>
 
       {/* Masonry grid */}
-      <section className="pb-24" style={{ backgroundColor: '#0E0E0C' }}>
-        <div className="mx-auto px-8" style={{ maxWidth: '1440px' }}>
+      <section className="pb-16 md:pb-24" style={{ backgroundColor: '#0E0E0C' }}>
+        <div className="mx-auto px-5 md:px-8" style={{ maxWidth: '1440px' }}>
           <CocinasLink />
           <MasonryGrid images={images} />
         </div>

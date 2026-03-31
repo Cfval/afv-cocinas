@@ -15,7 +15,7 @@
   /* Textos */
   --color-text-primary: #F2F0E8;
   --color-text-secondary: #9C9A8E;
-  --color-text-muted: #6B6A60;
+  --color-text-muted: #85837B;
 
   /* Estados */
   --color-success: #5DCAA5;
@@ -41,6 +41,36 @@
   --border-gold-subtle: rgba(201, 169, 110, 0.08);
   --border-gold-light: rgba(201, 169, 110, 0.1);
   --border-gold-medium: rgba(201, 169, 110, 0.25);
+}
+
+/* Text selection */
+::selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #F2F0E8;
+}
+
+::-moz-selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #F2F0E8;
+}
+
+/* Shimmer placeholder for images */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.img-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1A1A17 0%,
+    #1A1A17 40%,
+    rgba(201, 169, 110, 0.06) 50%,
+    #1A1A17 60%,
+    #1A1A17 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
 }
 
 /* Base */
